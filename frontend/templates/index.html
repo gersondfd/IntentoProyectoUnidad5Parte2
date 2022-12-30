@@ -1,0 +1,22 @@
+<script>
+    // Hacer una solicitud GET al endpoint '/api/pagos/' para obtener una lista de pagos
+    axios.get('/api/pagos/')
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  
+    // Hacer una solicitud POST al endpoint '/api/pagos/' para crear un nuevo pago
+    axios.post('/api/pagos/', {
+      monto: 100,
+      moneda: 'USD'
+    })
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  </script>
